@@ -52,23 +52,23 @@ caption{
 font-size: 18px;
 }
 
-.YoutubeWrapper{
-position: relative ;
-margin-top: 1.2em ;
-margin-bottom: 1.2em ;
-padding-top: 69px ;
-padding-bottom: 50% ;
-overflow: hidden ;
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16/9 ratio */
+  padding-top: 30px; /* IE6 workaround*/
+  height: 0;
+  overflow: hidden;
 }
-
-.YoutubeWrapper iframe {
-position: absolute ;
-top: 1280px;
-left: 720px;
-height: 100% ;
-width: 100% ;
+ 
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-
 </style>
 	</head>
 
@@ -102,7 +102,7 @@ width: 100% ;
 <div class="col-md-12">
 <h1>経堂まつり公式ホームページ</h1>
 <h4>Kyodo Festival official website</h4>
-<img src="./img/title.jpg" class="img-responsive" alt="Responsive image"> 
+<img src="https://lh5.googleusercontent.com/-s0WZJb5Y8Wc/U75Uvv6AYZI/AAAAAAAABpE/61Ld1ScTlsk/s950/title.jpg" class="img-responsive" alt="Responsive image"> 
 </div>   
 
 <div class="col-md-12">
@@ -213,9 +213,8 @@ width: 100% ;
 	
 </blockquote>  
 </div> 
-
-<div class="col-md-12 YoutubeWrapper">
-<iframe width="1280" height="720" src="//www.youtube.com/embed/RniasUJvD8U" frameborder="0" allowfullscreen></iframe>
+<div class="embed-container">
+<iframe width="853" height="480" src="//www.youtube.com/embed/RniasUJvD8U?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 <hr>
 
