@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>「せい家」経堂店</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+</head>
+
+<body>
+
+<style>
+.ui-header .ui-title, /* header */
+.ui-footer .ui-title, /* footer */
+.ui-btn-inner, /* button */
+.ui-li-heading, /* listview heading */
+.ui-li .ui-btn-text a.ui-link-inherit, /* listview link */
+.ui-li-desc /* listview description */
+{
+  overflow: visible;
+  white-space: normal;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+</style>
+
+<!-- TOPページ -->
+<div data-role="page" id="top">
+
+  <div data-role="header">
+    <h1>「せい家」経堂店</h1>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+		<img src="./images/Seiya_title.jpg" width="90%">
+
+    <ul data-role="listview" data-theme="a" data-divider-theme="a" data-inset="true">
+      <li><a href="#ramen" data-transition="slide">ラーメンメニュー</a></li>
+      <li><a href="#order" data-transition="slide">注文方法</a></li>
+      <li><a href="#sidemenu" data-transition="slide">餃子・おつまみ・ドリンク</a></li>
+    </ul>
+  </div><!-- /content -->
+
+  <div data-role="footer">
+    <h4><span class="notranslate">Copyright &copy; せい家</span></h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- ラーメンページ -->
+<div data-role="page" id="ramen">
+
+  <div data-role="header">
+    <h1>ラーメン</h1>
+		<a href="#top" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Back</a>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+
+    <ul data-role="listview" data-theme="a" data-divider-theme="a">
+			<li data-role="list-divider">安い、うまい大好評！</li>
+      <li><img src="./images/Seiya_chashuumen.jpg">チャーシューメン - 680円.<br>
+				<span class="notranslate">Cha-Shuu-Men.</span><br>
+				◎チャーシュー、海苔、ほうれん草
+			</li>
+      <li><img src="./images/Seiya_hourensou.jpg">ほうれん草 らーめん - 600円.<br>
+				<span class="notranslate">Hourensou-Ramen.</span><br>
+				◎ほうれん草、海苔、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_nori.jpg">のり らーめん - 600円.<br>
+				<span class="notranslate">Nori-Ramen.</span><br>
+				◎海苔、ほうれん草、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_ajituketamago.jpg">味付け玉子 らーめん - 550円.<br>
+				<span class="notranslate">Ajituke-Tamago-Ramen.</span><br>
+				◎味付け玉子、ほうれん草、海苔、チャーシュー
+			</li>
+			<li data-role="list-divider">感触の味わいNo.1!!</li>
+      <li><img src="./images/Seiya_negi.jpg">ネギ らーめん - 650円.<br>
+				<span class="notranslate">Negi-Ramen.</span><br>
+				◎ネギ、ほうれん草、海苔、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_ramen.jpg">らーめん - 500円.<br>
+				<span class="notranslate">Ramen.</span><br>
+				　ほうれん草、海苔、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_norinegi.jpg">のり ネギ らーめん - 750円.<br>
+				<span class="notranslate">Nori-Negi-Ramen.</span><br>
+				◎海苔、◎ネギ、ほうれん草、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_negichashuumen.jpg">ネギ チャーシューメン - 830円.<br>
+				<span class="notranslate">Negi-Cha-Shuu-Men.</span><br>
+				◎チャーシュー、◎ネギ、海苔、ほうれん草
+			</li>
+      <li><img src="./images/Seiya_moyashi.jpg">もやし らーめん - 550円.<br>
+				<span class="notranslate">Moyashi-Ramen.</span><br>
+				◎もやし、海苔、ほうれん草、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_menma.jpg">メンマ らーめん - 600円<br>
+				<span class="notranslate">Menma-Ramen.</span><br>
+				◎メンマ、海苔、ほうれん草、チャーシュー
+			</li>
+			<li data-role="list-divider">絶妙なスープの風味</li>
+      <li><img src="./images/Seiya_tukemen.jpg">つけめん.<br>
+				<span class="notranslate">Tsuke-Men</span><br>普通 1.5玉 500円.<br>中 2玉 600円.<br>大 2.5玉 650円.</li>
+      <li><img src="./images/Seiya_yakuminegi.jpg">薬味ネギ らーめん - 600円.<br>
+				<span class="notranslate">Yakumi-Negi-Ramen.</span><br>
+				◎薬味ネギ、海苔、ほうれん草、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_wakame.jpg">わかめ らーめん - 550円.<br>
+				<span class="notranslate">Wakame-Ramen.</span><br>
+				◎わかめ、海苔、ほうれん草、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_corn.jpg">コーン らーめん - 600円.<br>
+				<span class="notranslate">Corn-Ramen.</span><br>
+				◎コーン、海苔、ほうれん草、チャーシュー
+			</li>
+      <li><img src="./images/Seiya_norichashuu.jpg">のり チャーシューメン - 780円<br>
+				<span class="notranslate">Nori-Cha-Shuu-Men.</span><br>
+				◎海苔、◎チャーシュー、ほうれん草
+			</li>
+      <li><img src="./images/Seiya_special.jpg">せいやスペシャル - 1180円<br>
+				<span class="notranslate">Seiya-Special.</span><br>
+				海苔、ネギ、チャーシュー、玉子、コーン、めんま
+			</li>
+			<li data-role="list-divider">セット</li>
+      <li>学生セット - 550円.<br>
+				<span class="notranslate">Gakusei-Set.</span><br>
+				ラーメン(量：普通）＋ ライス（量：大盛り）
+			</li>
+      <li>餃子定食 - 390円.<br>
+				<span class="notranslate">Gyoza-Set.</span><br>
+				餃子(量：10個）＋ ライス（量：普通）＋ スープ.
+			</li>
+    </ul>
+
+    <p><a href="#top">メニューTOP</a></p>
+  </div><!-- /content -->
+
+  <div data-role="footer">
+    <h4><span class="notranslate">Copyright &copy; せい家</span></h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- 注文のしかたページ -->
+<div data-role="page" id="order">
+
+  <div data-role="header">
+    <h1>注文のしかた</h1>
+		<a href="#top" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Back</a>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+    <ul data-role="listview" data-theme="a" data-divider-theme="a">
+			<li>
+				<h2><span class="notranslate">ラーメン</span> : ラーメン</h2>
+				<p>
+					メニューからラーメンの種類を選んでください。
+				</p>
+			</li>
+			<li>
+				<h2><span class="notranslate">麺</span> : 麺</h2>
+				<p>
+					麺の太さを選んでください。<br>
+					太い - <strong><span class="notranslate">太麺 - Futo-Men</span></strong><br>
+					細い - <strong><span class="notranslate">細麺 - Hoso-Men</span></strong><br>
+				</p>
+			</li>
+			<li>
+				<h2><span class="notranslate">味</span> : 味</h2>
+				<p>
+					味はお好みで。（値段はかわりません）<br>
+					ご希望のない場合は、すべて「普通」になります。<br>
+					つめけんは対象外となります。
+					<table border="1">
+						<tr>
+							<td bgcolor="#cccccc"><strong>味(<span class="notranslate">Aji</span>)</strong></td><td>濃</td><td>普通</td><td>薄</td>
+						</tr>
+						<tr>
+							<td bgcolor="#cccccc"><strong>油(<span class="notranslate">Abura</span>)</strong></td><td>多</td><td>普通</td><td>少</td>
+						</tr>
+						<tr>
+							<td bgcolor="#cccccc"><strong>麺(<span class="notranslate">Men</span>)</strong></td><td>硬</td><td>普通</td><td>軟</td>
+						</tr>
+					</table>
+				</p>
+			</li>
+			<li>
+				<h2><span class="notranslate">具</span> : トッピング</h2>
+				<p>
+					トッピングを選んでよりおいしく<br>
+					<strong>チャーシュー（<span class="notranslate">Cha-Shuu</span>）</strong> - 180円</br>
+					<strong>メンマ（<span class="notranslate">Menma</span>）</strong> - 100円</br>
+					<strong>ネギ（<span class="notranslate">Negi</span>）</strong> - 150円</br>
+					<strong>薬味ネギ（<span class="notranslate">Yakumi-Negi</span>）</strong> - 100円</br>
+					<strong>ほうれん草（<span class="notranslate">Hourensou</span>）</strong> - 100円</br>
+					<strong>わかめ（<span class="notranslate">Wakame</span>）</strong> - 50円</br>
+					<strong>のり（<span class="notranslate">Nori</span>）</strong> - 100円</br>
+					<strong>もやし（<span class="notranslate">Moyashi</span>）</strong> - 50円</br>
+					<strong>コーン（<span class="notranslate">Corn</span>）</strong> - 100円</br>
+					<strong>味付け玉子（<span class="notranslate">Ajitsuke-Tamago</span>）</strong> - 50円</br>
+				</p>
+			</li>
+			<li>
+				<h2><span class="notranslate">量</span> : 量</h2>
+				<p>量の選択。<br>
+					太麺の時だけ。- <span class="notranslate">太麺 - Futomen</span></p>
+				<p>
+					中盛り - <strong><span class="notranslate">中盛り - Chu-mori</span></strong> +100円.<br>
+					大盛り - <strong><span class="notranslate">大盛り - Oh-mori</span></strong> +150円.
+				</p>
+			</li>
+			<li>
+				<h2>追加</h2>
+				<p>
+					<strong><span class="notranslate">替玉 - Kaedama</span></strong>  +100円.<br>
+					麺だけの追加注文。<br>
+					細麺の時だけ。- <span class="notranslate">細麺- Hosomen</span>
+				</p>
+			</li>
+			<li>
+				<h2><span class="notranslate">香</span> : 香</h2>
+				<p>
+					香りを添え、味を引き締めます。<br>
+					値段は変わりません。<br>
+					セルフサービス。
+				</p>
+				<p>
+					しょうが - <strong><span class="notranslate">しょうが - Shouga</span></strong>.<br>
+					油を抑え、胃液の分泌を促し、消化を助け、食欲を増進させます。
+				</p>
+				<p>
+					豆板醤 - <strong><span class="notranslate">豆板醤 - Tobanjyan</span></strong>.<br>
+					刺激を求めるあなたに最高。<br>
+					ぜひお勧めします。<br>
+					でもスプーン１杯くらいですよ、それ以上は・・・!?
+				</p>
+				<p>
+					にんにく - <strong><span class="notranslate">にんにく - Ninniku</span></strong><br>
+					疲労回復の食材です。<br>
+					スプーン一杯で芳醇でエネルギッシュな味が広がります。
+				</p>
+			</li>
+			
+		</ul>
+
+    <p><a href="#top">メニューTOP</a></p>
+  </div><!-- /content -->
+
+  <div data-role="footer">
+    <h4><span class="notranslate">Copyright &copy; せい家</span></h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- サイドメニュー -->
+<div data-role="page" id="sidemenu">
+
+  <div data-role="header">
+    <h1>餃子・おつまみ・ドリンク</h1>
+		<a href="#top" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">戻る</a>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+		<img src="./images/Seiya_otumami.jpg" width="100%"/>
+		<p>
+			<strong>餃子（<span class="notranslate">Gyoza</span>）</strong> - 180円</br>
+			<strong>生ビール（<span class="notranslate">Nama-beer</span>）</strong> - 240円</br>
+			<strong>瓶ビール（<span class="notranslate">Bin-beer</span>）</strong> - 330円</br>
+			<strong>ライス（<span class="notranslate">Rice</span>）</strong> - 50円</br>
+			<strong>半ライス（<span class="notranslate">Han-rice</span>）</strong> - 50円</br>
+			<strong>おつまみセット（<span class="notranslate">Otumami-set</span>）</strong> - 380円</br>
+		</p>
+
+    <p><a href="#top">メニューTOP</a></p>
+  </div><!-- /content -->
+
+  <div data-role="footer">
+    <h4><span class="notranslate">Copyright &copy; せい家</span></h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
+

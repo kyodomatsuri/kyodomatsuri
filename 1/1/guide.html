@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+	<link rel="stylesheet" href="../themes/nodaistreet.min.css" />
+	<link rel="stylesheet" href="../style.css" />
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js">
+	</script>
+	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js">
+	</script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places">
+	</script>
+	<script type="text/javascript">
+				var destination = "経堂駅";
+	</script>
+	<script type="text/javascript">
+
+				function initialize() {
+					directionsDisplay = new google.maps.DirectionsRenderer();
+					directionsService = new google.maps.DirectionsService();
+					map = new google.maps.Map(document.getElementById("map"), {
+						zoom : 16,
+						center : new google.maps.LatLng(35.651543, 139.63648),//経堂駅
+						mapTypeControl : false,
+						navigationControlOptions : {
+							style : google.maps.NavigationControlStyle.SMALL
+						},
+						scaleControl : true,
+						scaleControlOptions : {
+							style : google.maps.ScaleControlStyle.DEFAULT
+						},
+						streetViewControl : false,
+						mapTypeId : google.maps.MapTypeId.ROADMAP
+					});
+					directionsDisplay.setMap(map);
+					google.maps.event.addListener(directionsDisplay, 'directions_changed', function() 
+					{
+					});
+					//高さを調整する
+					var hh = ($(document).height()-60);
+					$("#map").css("height", hh);
+				}
+
+				function addressJump(adrs) {//ジオコーディング
+					var gc = new google.maps.Geocoder();
+					gc.geocode({
+						address : adrs
+					}, function(results, status) {
+						if (status == google.maps.GeocoderStatus.OK) {
+							var latlng = results[0].geometry.location;
+							map.setCenter(latlng);
+							var marker = new google.maps.Marker();
+							marker.setPosition(latlng);
+							marker.setMap(map);
+						}
+					});
+				}
+
+				$(function() {//プルダウンリストの結果をジオコード関数に引き渡す
+					$("select").change(function() {
+						var adrs = $(":selected").attr("value");
+						destination = adrs;
+						addressJump(adrs);
+					});
+				});
+				
+				$("#position").live("tap", function(){ //徒歩ルートの表示
+					if(navigator.geolocation){
+						navigator.geolocation.getCurrentPosition(function(pos){
+							var lat = pos.coords.latitude;
+							var lng = pos.coords.longitude;
+							var currentPos = new google.maps.LatLng(lat, lng);
+							var request = {
+								origin: currentPos,
+								destination: destination,
+								travelMode: google.maps.DirectionsTravelMode.WALKING,
+								optimizeWaypoints: true //最適化された最短距離にする。
+							};
+							directionsService.route(request, function(response, status) {
+								if (status == google.maps.DirectionsStatus.OK) {
+									directionsDisplay.setDirections(response);
+								}
+							});
+						},
+						function(error){alert('error:' + error.code);},
+						{enableHighAccuracy:false, timeout:8000, maximimAge:0}
+					)}
+				})
+
+				google.maps.event.addDomListener(window, 'load', initialize);
+		
+	</script>
+	<title>経堂農大通り商店街周辺施設案内</title>
+</head>
+<body>
+	<!--///////周辺施設案内///////-->
+	<div data-role="page" id="guide" data-fullscreen="true">
+	<div data-role="header" data-position="fixed">
+		<a href="./index.html" rel="external" data-icon="home">戻る</a>
+		<h1>周辺施設案内</h1>
+	</div>
+	<div data-role="content">
+		<div id="map" class="ui-shadow">
+		</div>
+		<div data-role="navbar">
+			<ul>
+				<li>
+					<div class="ui-select ui-button-inner">
+							<select tabindex="-1" name="dest" id="dest" data-native-menu="false" data-corners="false">
+							<option>周辺施設</option>
+							<optgroup label="学校">
+								<option value="35.640923,139.632046">東京農業大学
+								</option>
+								<option value="35.641446,139.635383">東京農大第一高等学校中等部
+								</option>
+								<option value="35.647297,139.640039">鴎友学園女子中学高等学校
+								</option>
+								<option value="35.655344,139.628924">恵泉女学園中学・高等学校
+								</option>
+								<option value="35.644184,139.635597">和光小学校
+								</option>
+								<option value="35.645056,139.631499">桜丘小学校
+								</option>
+								<option value="35.643731,139.629546">桜丘中学校
+								</option>
+								<option value="35.645658,139.642378">桜木中学校
+								</option>
+								<option value="35.655936,139.636831">赤堤小学校
+								</option>
+								<option value="35.65632,139.630748">経堂小学校
+								</option>
+								<option value="35.649851,139.644792">世田谷小学校
+								</option>
+							</optgroup>
+							<optgroup label="幼稚園・保育園">
+								<option value="35.649197,139.635544">わかくさ保育園
+								</option>
+								<option value="35.643635,139.635201">和光幼稚園
+								</option>
+								<option value="35.648081,139.638524">愛珠幼稚園
+								</option>
+								<option value="35.65265,139.643505">常徳幼稚園
+								</option>
+							</optgroup>
+							<optgroup label="警察署">
+								<option value="35.657802,139.652603">北沢警察署
+								</option>
+								<option value="35.652083,139.615996">成城警察署（免許更新）
+								</option>
+								<option value="35.640409,139.666969">世田谷警察署（免許更新）
+								</option>
+							</optgroup>
+							<optgroup label="交番">
+								<option value="35.651107,139.636885">経堂駅前交番
+								</option>
+								<option value="35.657192,139.642367">赤堤交番
+								</option>
+							</optgroup>
+							<optgroup label="消防署">
+								<option value="35.650793,139.640608">世田消防署宮の坂出張所
+								</option>
+							</optgroup>
+							<optgroup label="他・施設">
+								<option value="35.646591,139.653268">世田谷区役所
+								</option>
+								<option value="35.65054,139.641498">世田谷経堂出張所
+								</option>
+								<option value="35.646163,139.651712">世田谷保健所
+								</option>
+								<option value="35.646373,139.654191">東京法務局世田谷出張所
+								</option>
+								<option value="35.649372,139.632368">千歳郵便局
+								</option>
+								<option value="35.652144,139.637614">経堂前郵便局
+								</option>
+							</optgroup>
+						</select>
+					</div>
+				</li>
+				<li>
+					<input type="button" id="position" data-corners="false" value="徒歩ルート表示">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--///////周辺施設案内///////-->
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>松ちゃん</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+</head>
+
+<body>
+
+<style>
+.ui-header .ui-title, /* header */
+.ui-footer .ui-title, /* footer */
+.ui-btn-inner, /* button */
+.ui-li-heading, /* listview heading */
+.ui-li .ui-btn-text a.ui-link-inherit, /* listview link */
+.ui-li-desc /* listview description */
+{
+  overflow: visible;
+  white-space: normal;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+</style>
+
+<!-- TOPページ -->
+<div data-role="page" id="top">
+  <div data-role="header">
+    <h1>モツ焼き<span class="notranslate">「松ちゃん」</span></h1>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+		<h2>串焼き：ブタ</h2>
+		<p>
+			<strong>タン、ハツ、カシラ（<span class="notranslate">Tan,Hatu, Kasira</span>）</strong></br>
+			<strong>レバー、シロ（<span class="notranslate">Reba-, Siro</span>）</strong></br>
+			<strong>ガツ、コブクロ（<span class="notranslate">Gatu, Kobukuro</span>）</strong></br>
+			<strong>軟骨、テッポー（<span class="notranslate">Nankotu, Teppo</span>）</strong></br>
+			- それぞれ 100円.<br>
+			<strong>ブタバラ（<span class="notranslate">Buta-Bara</span>）</strong> - 150円</br>
+			<strong>チョリソーウインナー（<span class="notranslate">Choriso</span>）</strong> - 150円</br>
+			<strong>つくね（<span class="notranslate">Tukune</span>）</strong> - 200円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>串焼き：鳥</h2>
+		<p>
+			<strong>ネギマ、スナギモ（<span class="notranslate">Negima, Sunagimo</span>）</strong></br>
+			<strong>皮、うずら玉子（<span class="notranslate">Kawa, Uzura-Tamago</span>）</strong></br>
+			- それぞれ 100円.<br>
+			<strong>チキンボール（<span class="notranslate">Chikin-Ball</span>）</strong> - 150円</br>
+			<strong>手羽先（<span class="notranslate">Tebasaki-Kusi</span>）</strong> - 200円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>串焼き：野菜</h2>
+		<p>
+			<strong>ネギ、ししとう. （<span class="notranslate">Negi, Sisitou</span>）</strong></br>
+			<strong>しいたけ（<span class="notranslate">Siitake</span>）</strong></br>
+			- それぞれ 150円.<br>
+			<strong>山いも（<span class="notranslate">Yama-Imo</span>）</strong> - 200円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>串焼き：ネギ塩</h2>
+		<p>
+			<strong>タン、ハツ（<span class="notranslate">Negisio-Tan-Hatu</span>）</strong><br>
+			×2 - 250円</br>
+			<strong>ブタバラ（<span class="notranslate">Negisio-Butabara</span>）</strong><br>
+			×2 - 350円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>モツの刺身</h2>
+		<p>
+			<strong>レバテキ（<span class="notranslate">Reba-Teki</span>）</strong> - 380円</br>
+			<strong>ネギ塩レバテキ（<span class="notranslate">Negisio-Reba-teki</span>）</strong> - 450円</br>
+			<strong>タン刺 または ハツ刺（<span class="notranslate">Tan-sashi / hatu-sashi</span>）</strong> - 450円</br>
+			<strong>ガツ刺（<span class="notranslate">Gatu-sashi</span>）</strong> - 350円</br>
+			<strong>ハラミ タタキ（<span class="notranslate">Harami-Tataki</span>）</strong> - 500円</br>
+			<strong>コブクロ刺（<span class="notranslate">Kobukuro-sashi</span>）</strong> - 500円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>網焼き</h2>
+		<p>
+			<strong>牛ホルモン焼き(塩)（<span class="notranslate">Horumon-Yaki-Sio</span>）</strong> - 450円</br>
+			<strong>牛ホルモン焼き(ポン酢)（<span class="notranslate">Horumon-Yaki-Ponzu</span>）</strong> - 500円</br>
+			<strong>あぶりベーコン（<span class="notranslate">Aburi-Bekon</span>）</strong> - 480円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>煮込み</h2>
+		<p>
+			<strong>塩モツ煮込み（<span class="notranslate">Sio-Motu-Nikomi</span>）</strong> - 400円</br>
+			<strong>モツとうふ（<span class="notranslate">Motu-Tofu</span>）</strong> - 480円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>豚</h2>
+		<p>
+			<strong>豚足（<span class="notranslate">Tonsoku</span>）</strong> - 380円</br>
+		</p>
+
+		<h2>ジャガ芋バター炒め</h2>
+		<p>
+			<strong>ジャガバター（<span class="notranslate">Jyaga-Bata</span>）</strong> - 350円</br>
+			<strong>塩辛ジャガバター（<span class="notranslate">Siokara-Jyaga-Bata</span>）</strong> - 450円</br>
+			<strong>タラコジャガバター（<span class="notranslate">Tarako-Jyaga-Bata</span>）</strong> - 450円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>やさい</h2>
+		<p>
+			<strong>みそきゅうり（<span class="notranslate">Miso-Q</span>）</strong> - 280円</br>
+			<strong>きゃべつ（<span class="notranslate">Kyabetu</span>）</strong> - 280円</br>
+			<strong>オニオンスライス（<span class="notranslate">Oni-Sra</span>）</strong> - 280円</br>
+			<strong>冷やしとまと（<span class="notranslate">Hiyashi-Tomato</span>）</strong> - 280円</br>
+			<strong>エシャレット（<span class="notranslate">Esharetto</span>）</strong> - 280円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>すぐ出せる料理</h2>
+		<p>
+			<strong>ザーサイ浅漬け（<span class="notranslate">Zasai-Asaduke</span>）</strong> - 350円</br>
+			<strong>セロリ浅漬け（<span class="notranslate">Serori-Asaduke</span>）</strong> - 350円</br>
+			<strong>塩らっきょ（<span class="notranslate">Shio-Rakkyo</span>）</strong> - 350円</br>
+			<strong>キムチ（<span class="notranslate">Kimuti</span>）</strong> - 250円</br>
+			<strong>チャンジャ（<span class="notranslate">Tyannjya</span>）</strong> - 450円</br>
+			<strong>冷奴（<span class="notranslate">Yakko</span>）</strong> - 250円</br>
+			<strong>梅コリコリ（<span class="notranslate">Ume-Korikori</span>）</strong> - 450円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>おつまみ</h2>
+		<p>
+			<strong>焼きするめ（<span class="notranslate">Yaki-Surume</span>）</strong> - 380円</br>
+			<strong>エイのひれ（<span class="notranslate">Ei-Hire</span>）</strong> - 500円</br>
+			<strong>サバ缶詰（<span class="notranslate">Saba-Kan</span>）</strong> - 350円</br>
+			<strong>コーン缶詰（<span class="notranslate">Corn-Kan</span>）</strong> - 350円</br>
+			<strong>いなば缶詰（<span class="notranslate">Inaba-No-kandume</span>）</strong> - 350円</br>
+			<strong>柿の種（<span class="notranslate">Kakino-Tane</span>）</strong> - 100円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>あげもの</h2>
+		<p>
+			<strong>ハムカツ（<span class="notranslate">Hamu-Katu</span>）</strong> - 380円</br>
+			<strong>ニンニク揚げ（<span class="notranslate">Ninniku-Maruage</span>）</strong> - 500円</br>
+			<strong>フライドポテト（<span class="notranslate">Fried potate</span>）</strong> - 350円</br>
+			<strong>なんこつ唐揚げ（<span class="notranslate">Nankotu-Karaage</span>）</strong> - 350円</br>
+			<strong>アジ フライ（<span class="notranslate">Aji-Furai</span>）</strong> - 350円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>皿</h2>
+		<p>
+			<strong>カシラのネギ載せ（<span class="notranslate">Kasira-No-Neginose</span>）</strong> - 250円</br>
+			<strong>鳥皮ポン酢（<span class="notranslate">Torikawa-Ponzu</span>）</strong> - 250円</br>
+			<strong>「経堂一力」さんの厚揚げ焼き（<span class="notranslate">Kyodo-Itirikisan-No-Atuageyaki</span>）</strong> - 380円</br>
+			<strong>きゅうりみょうがの梅和え（<span class="notranslate">Kyuuri-Myouga-No-Umezoe</span>）</strong> - 350円</br>
+			<strong>なすみそ（<span class="notranslate">Nasumiso</span>）</strong> - 280円</br>
+			<strong>肉みそとうふ（<span class="notranslate">Nikumiso-Tofu</span>）</strong> - 380円</br>
+			<strong>皿もんじゃ（<span class="notranslate">Sara-Monjya</span>）</strong> - 250円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>たまご料理</h2>
+		<p>
+			<strong>ニラ玉（<span class="notranslate">Nira-Tama</span>）</strong> - 300円</br>
+			<strong>きゃべ玉（<span class="notranslate">Kyabe-Tama</span>）</strong> - 380円</br>
+			<strong>納豆オムレツ（<span class="notranslate">Natto-Omuretu</span>）</strong> - 350円</br>
+			<strong>じゃこオムレツ（<span class="notranslate">Jyako-Omuretu</span>）</strong> - 380円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+
+		<h2>ごはん、麺</h2>
+		<p>
+			<strong>焼きおにぎり（<span class="notranslate">Yaki-Onigiri</span>）</strong> - 250円</br>
+			<strong>焼きおにぎりの汁かけ（<span class="notranslate">Siru-Kake</span>）</strong> - 300円</br>
+			<strong>ラーメン（<span class="notranslate">Ramen</span>）</strong> - 380円</br>
+			<strong>お茶漬け（<span class="notranslate">Nagatanien-No-OtyadukeJyako</span>）</strong> - 250円</br>
+			<strong>ごはん（<span class="notranslate">Rice</span>）</strong> - 200円</br>
+		</p>
+
+    <p><a href="#drink">ドリンクメニュー</a></p>
+  </div><!-- /content -->
+</div><!-- /page -->
+
+<!-- ドリンク -->
+<div data-role="page" id="drink">
+  <div data-role="header">
+    <h1>ドリンクメニュー</h1>
+		<a href="#top" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Back</a>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+		<h2>サッポロビール</h2>
+		<p>
+			<strong>赤星(大ビン)（<span class="notranslate">Akaboshi-OhBin</span>）</strong> - 550円</br>
+			<strong>黒ラベル(生ビール)（<span class="notranslate">KuroLabel-Nama beer</span>）</strong> - 450円</br>
+		</p>
+
+    <p><a href="#top">メニュー</a></p>
+
+		<h2>酎ハイ、サワー</h2>
+		<p>
+			<strong>生レモンサワー（<span class="notranslate">Nama-Lemon-sawa</span>）</strong> - 500円</br>
+			<strong>レモンサワー（<span class="notranslate">Lemon-sawa</span>）</strong> - 400円</br>
+			<strong>酎ハイ（<span class="notranslate">Chu-Hi</span>）</strong> - 300円</br>
+			<strong>烏龍 ハイ（<span class="notranslate">Uron-Hi</span>）</strong> - 350円</br>
+			<strong>緑茶 ハイ（<span class="notranslate">Ryoku-cha-Hi</span>）</strong> - 350円</br>
+			<strong>梅干し サワー（<span class="notranslate">Umebosi-sawa</span>）</strong> - 350円</br>
+			<strong>バイス サワー（<span class="notranslate">Baisu-sawa</span>）</strong> - 400円</br>
+			<strong>ハイ辛 サワー（<span class="notranslate">Hai-Kara-sawa</span>）</strong> - 400円</br>
+			<strong>クエン酸 サワー（<span class="notranslate">Kuen-San-sawa</span>）</strong> - 400円</br>
+			<strong>シークヮーサー サワー（<span class="notranslate">Si-KuWa-Sa-sawa</span>）</strong> - 400円</br>
+		</p>
+
+    <p><a href="#top">メニュー</a></p>
+
+		<h2>ハイボール</h2>
+		<p>
+			<strong>ウイスキー ハイボール（<span class="notranslate">Whiskey-Hiball</span>）</strong> - 380円</br>
+			<strong>レモン ハイボール（<span class="notranslate">Lemon-Hiball</span>）</strong> - 400円</br>
+			<strong>経堂 ハイボール（<span class="notranslate">Kyodo-Hiball</span>）</strong> - 450円</br>
+			<strong>下町 ハイボール（<span class="notranslate">Sitamati-Hiball</span>）</strong> - 350円</br>
+			<strong>ホイス（<span class="notranslate">Hoisu</span>）</strong> - 400円</br>
+		</p>
+
+    <p><a href="#top">メニュー</a></p>
+
+		<h2>ホッピー</h2>
+		<p>
+			<strong>３冷ホッピー(白or黒)（<span class="notranslate">Sanrei-Hoppy(Shiro/Kuro)</span>）</strong> - 380円</br>
+			セットもできます。<br>
+			中 - 200円、外 - 300円.<br>
+			<strong>キンミヤ ホッピー(白or黒)（<span class="notranslate">Kinmiya-Hoppy(Shiro/Kuro)</span>）</strong> - 500円</br>
+			キンミヤ中（<span class="notranslate">Kinmiya-Chuu</span>）- 250円<br>
+		</p>
+
+    <p><a href="#top">メニュー</a></p>
+
+		<h2>キンミヤ 焼酎</h2>
+		<p>
+			<strong>キンミヤ酎ハイ（<span class="notranslate">Kinmiya-Chu-Hi</span>）</strong> - 350円</br>
+			<strong>キンミヤ梅割り（<span class="notranslate">Kinmiya-Ume-wari</span>）</strong> - 400円</br>
+			<strong>キンミヤボトル（<span class="notranslate">Kinmiya-Bottle</span>）</strong> - 600ml - 1500円</br>
+			セット（<span class="notranslate">Set</span>） +200円.<br>
+			ソーダ（<span class="notranslate">Soda</span>）+200円.<br>
+			烏龍 P（<span class="notranslate">Uron-Pitcher</span>）+400円.<br>
+			緑茶 P（<span class="notranslate">Soda-Pitcher</span>）+400円.<br>
+			梅干し（<span class="notranslate">Umeboshi</span>）+50円.<br>
+			レモン（<span class="notranslate">Lemon</span>）+100円.<br>
+		</p>
+
+    <p><a href="#top">メニュー</a></p>
+
+		<h2>梅酒</h2>
+		<p>
+			<strong>梅酒（<span class="notranslate">Ume-shu</span>）</strong> - 400円</br>
+			ロック、お湯割り、ソーダ
+		</p>
+
+    <p><a href="#top">メニュー</a></p>
+
+		<h2>辛い焼酎</h2>
+		<p>
+			<strong>チリホッピー（<span class="notranslate">Chiri-Hoppy</span>）</strong> - 500円</br>
+			<strong>カラカラ サワー（<span class="notranslate">Kara-Kara-sawa</span>）</strong> - 480円</br>
+			<strong>チリバイス S（<span class="notranslate">Chiri-Baisu S</span>）</strong> - 480円</br>
+		</p>
+
+    <p><a href="#top">メニュー</a></p>
+
+  </div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>
+
