@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/*--------------------------------------------*/
+@media screen and (max-width: 640px){
+
+html{ font-size: 62.5%;}
+body{
+	min-height: 100%;
+	font-size: 1.4rem;
+	width: 100%;
+	background: #fff;
+	color: #404040;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Droid Sans', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	line-height: 1.6;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+	font-size: 2.1rem;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+}
+
+p{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+	color: #00A3E2;
+}
+
+a:hover{ text-decoration: underline;}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol{
+-webkit-padding-start: 20px;
+}
+
+
+.mb15{ margin-bottom: 15px;}
+.mBtm50{ margin-bottom: 50px;}
+
+.none { display: none; }
+
+/*--------------------------------------------
+#header
+--------------------------------------------*/
+#header{
+	background: #679934;
+	color: #FFF;
+	position: relative;
+}
+
+#header .inner{
+	padding: 10px 10px;
+	margin: 0 auto;
+}
+
+#header h1{
+font-size: 2.6rem;
+font-weight: bold;
+/* text-shadow: 1px 1px 1px #52A4DB; */
+text-align: center;
+margin: 10px 0;
+}
+
+#header p{
+font-size: 1.7rem;
+margin: 10px auto 10px;
+}
+
+
+#header nav{
+display: none;
+}
+
+/*--------------------------------------------
+#process
+--------------------------------------------*/
+#process{
+}
+
+#process .inner{
+	padding: 10px 10px;
+	margin: 0 auto;
+}
+
+#process .inner h2 {
+	margin-bottom: 20px;
+	font-size: 2.3rem;
+	border-bottom: 1px solid #000;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+#process .process_list{
+	display: inline-block;
+	width: 31%;
+	vertical-align: top;
+	margin-top: 10px;
+	padding: 0 11px;
+}
+
+#process .enabled_device{
+font-size: 90%;
+margin-bottom: 10px;
+}
+
+
+#process #iphone{
+margin: 10px 0;
+}
+
+#process #android{
+margin: 20px 0 10px;
+}
+
+#process #iphone img, #process #android img{
+text-align: center;
+}
+
+
+#process .process_list h3{
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+#process .annotation{
+	font-size: 70%;
+}
+
+/*--------------------------------------------
+#about
+--------------------------------------------*/
+#about{
+	background: #679934;
+	margin: 0;
+	padding: 0;
+}
+
+#about .inner{
+	padding: 20px 0;
+	margin: 0 auto;
+}
+
+#about #logo{
+text-align: center;
+}
+
+#about #logo img{
+padding: 20px;
+background: #FFF;
+border-radius: 7px;
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+width: 80%;
+}
+
+
+
+
+
+#pageTop {
+position: fixed; 
+right: 20px; 
+bottom: 25px; 
+z-index: 1000; 
+border-top-left-radius: 100px; 
+border-radius: 10px; 
+-webkit-border-radius: 10px; 
+-moz-border-radius: 10px; 
+font-size: 120%; 
+border: 1px solid rgb(187, 187, 187); 
+width: 40px; 
+height: 40px; 
+display: block; 
+background: rgb(255, 255, 255);
+}
+
+#pageTop  a{
+display: block; 
+color: #679934; 
+text-decoration: none;
+text-align: center;
+margin-top: 5px;
+}
