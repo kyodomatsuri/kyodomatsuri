@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>すし勝</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<style>
+/*-
+*リセットおよび初期化
+*/
+*{
+	padding:0;
+	margin:0;
+}
+
+html{font-size: 62.5%;
+margin: 0;}
+body{font-size: 1.4rem;}
+
+body{
+	color:#000000;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Droid Sans', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+}
+
+
+ul,ol{
+	list-style:none;
+}
+
+a{
+	color: #FF7122;
+	text-decoration:none;
+}
+
+a:hover{
+	color: #FF4700;
+	text-decoration:underline;
+}
+
+img{ border:none; }
+
+a img{
+background:none!important;
+}
+
+p{margin: 0;}
+
+
+.menu_list p{
+padding: 10px;
+padding: 10px;
+border-bottom: 1px solid #ccc;
+line-height: 24px;
+}
+
+.menu_list p .yen{
+text-align: right;
+display: block;
+font-weight: bold;
+}
+
+h1{
+	color: #000;
+	padding: 20px 10px;
+	background:#E9AE60;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.signboard{
+padding: 5px;
+background: #FFF;
+border: #000 3px solid;
+}
+
+.signboard span{
+font-size: 3.4rem !important;
+}
+
+
+
+h2{
+	padding: 10px;
+	background: #000;
+	color: #FFF;
+	font-size: 2.0rem;
+	}
+
+h3{
+	padding: 10px;
+	background: #817863;
+	color: #FFF;
+	font-size: 1.6rem;
+	}
+	
+.mincho{
+font-family:
+   "ヒラギノ明朝 ProN W6",
+   "HiraMinProN-W6",
+   "HG明朝E",
+   "ＭＳ Ｐ明朝",
+   "MS PMincho",
+   "MS 明朝",
+   serif;
+font-weight: bold;
+font-size: 120%;
+}
+
+</style>
+
+<!-- TOPページ -->
+<div data-role="page" id="top">
+
+  <div data-role="header">
+    <h1><div class="mincho signboard">立ち喰い処<span class="notranslate">すし勝</span></div></h1>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+		<h2>握り寿司 100円</h2>
+		<div class="menu_list">
+		<p>
+			<span class="notranslate"><strong class="mincho">びんちょうまぐろ</strong></span><br>
+			<span class="notranslate">Binchou maguro</span><br>
+			ビンナガ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">バチまぐろ赤身</strong></span><br>
+			<span class="notranslate">Bachi maguro akami</span><br>
+			メバチマグロ。赤身。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">するめいか</strong></span><br>
+			<span class="notranslate">Surume ika</span><br>
+			スルメイカ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">えんがわ</strong></span><br>
+			<span class="notranslate">Engawa</span><br>
+			ヒラメ、カレイ。鰭（ひれ）を動かすための筋肉。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">サーモン</strong></span><br>
+			<span class="notranslate">Salmon</span><br>
+			サーモン。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">生いわし</strong></span><br>
+			<span class="notranslate">Nama iwashi</span><br>
+			生イワシ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">生しらす</strong></span><br>
+			<span class="notranslate">Nama shirasu</span><br>
+			生シラス。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">とびっ子</strong></span><br>
+			<span class="notranslate">Tobikko</span><br>
+			とびっこ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">こはだ</strong></span><br>
+			<span class="notranslate">Kohada</span><br>
+			こはだ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">〆さば</strong></span><br>
+			<span class="notranslate">Shime saba</span><br>
+			しめサバ
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">あじ</strong></span><br>
+			<span class="notranslate">Aji</span><br>
+			アジ
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">玉子</strong></span><br>
+			<span class="notranslate">Tamago</span><br>
+			玉子焼き
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">ゲソ</strong></span><br>
+			<span class="notranslate">Geso</span><br>
+			イカ。ゲソ。
+		</p>
+		</div><!-- /menu_list -->
+
+		<h2>握り寿司 150円</h2>
+		<div class="menu_list">
+
+		<p>
+			<span class="notranslate"><strong class="mincho">本まぐろ赤身</strong></span><br>
+			<span class="notranslate">Hon maguro akami</span><br>
+			本マグロ。赤身。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">カジキマグロ</strong></span><br>
+			<span class="notranslate">Kajiki maguro</span><br>
+			カジキマグロ
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">ねぎとろ</strong></span><br>
+			<span class="notranslate">Negitoro</span><br>
+			刻んだマグロとネギ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">すみいか</strong></span><br>
+			<span class="notranslate">Sumiika</span><br>
+			墨イカ。墨烏賊。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">イサキ</strong></span><br>
+			<span class="notranslate">Isaki</span><br>
+			イサキ。伊佐木。鶏魚。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">生だこ</strong></span><br>
+			<span class="notranslate">Namadako</span><br>
+			生タコ
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">かつを</strong></span><br>
+			<span class="notranslate">Katsuo</span><br>
+			カツオ
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">ほたて</strong></span><br>
+			<span class="notranslate">Hotate</span><br>
+			帆立貝
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">シャコ</strong></span><br>
+			<span class="notranslate">Shako</span><br>
+			蝦蛄。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">平目</strong></span><br>
+			<span class="notranslate">Hirame</span><br>
+			ヒラメ。鮃。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">真鯛</strong></span><br>
+			<span class="notranslate">Madai</span><br>
+			真鯛
+		</p>
+		</div><!-- /menu_list -->
+
+
+		<h2>握り寿司 200円</h2>
+
+		<div class="menu_list">
+		<p>
+			<span class="notranslate"><strong class="mincho">しまあじ</strong></span><br>
+			<span class="notranslate">Shimaaji</span><br>
+			シマアジ。縞鯵。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">ズワイガニ</strong></span><br>
+			<span class="notranslate">Zuwai gani</span><br>
+			ズワイガニ。松葉蟹。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">数の子</strong></span><br>
+			<span class="notranslate">Kazunoko</span><br>
+			数の子。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">いくら</strong></span><br>
+			<span class="notranslate">Ikura</span><br>
+			イクラ
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">鉄火巻</strong></span><br>
+			<span class="notranslate">Tekkamaki</span><br>
+			巻きずし。マグロ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">海老</strong></span><br>
+			<span class="notranslate">Ebi</span><br>
+			海老
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">穴子</strong></span><br>
+			<span class="notranslate">Anago</span><br>
+			穴子
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">金目鯛</strong></span><br>
+			<span class="notranslate">Kinmedai</span><br>
+			金目鯛。キンメダイ。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">ツブ貝</strong></span><br>
+			<span class="notranslate">Tsubugai</span><br>
+			ツブガイ。ツブ貝。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">青柳</strong></span><br>
+			<span class="notranslate">Aoyagi</span><br>
+			バカガイ。バカ貝。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">甘海老</strong></span><br>
+			<span class="notranslate">Amaebi</span><br>
+			甘海老。
+		</p>
+
+		</div><!-- /menu_list -->
+
+		<h2>握り寿司 250円</h2>
+
+		<div class="menu_list">
+		<p>
+			<span class="notranslate"><strong class="mincho">ほっき貝</strong></span><br>
+			<span class="notranslate">Hokkigai</span><br>
+			ホッキ貝
+		</p>
+		<div class="menu_list">
+		<p>
+			<span class="notranslate"><strong class="mincho">赤貝</strong></span><br>
+			<span class="notranslate">Akagai</span><br>
+			赤貝
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">本まぐろ中トロ</strong></span><br>
+			<span class="notranslate">Honmaguro Chuutoro</span><br>
+			本まぐろ。中とろ。
+		</p>
+		</div><!-- /menu_list -->
+
+
+		<h2>握り寿司 300円</h2>
+
+		<div class="menu_list">
+		<p>
+			<span class="notranslate"><strong class="mincho">うに</strong></span><br>
+			<span class="notranslate">Uni</span><br>
+			うに
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">本まぐろ大トロ</strong></span><br>
+			<span class="notranslate">Honmaguro ootoro</span><br>
+			本まぐろ。とろ。
+		</p>
+		</div><!-- /menu_list -->
+
+
+		<h2>巻物 150円</h2>
+
+		<div class="menu_list">
+		<p>
+			<span class="notranslate"><strong class="mincho">うめ巻</strong></span><br>
+			<span class="notranslate">Umemaki</span><br>
+			梅の巻ずし。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">かっぱ巻</strong></span><br>
+			<span class="notranslate">Kappa maki</span><br>
+			きゅうりの巻ずし。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">おしんこ巻</strong></span><br>
+			<span class="notranslate">Oshinko maki</span><br>
+			おしんこの巻ずし。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">かんぴょう巻</strong></span><br>
+			<span class="notranslate">Kanpyou maki</span><br>
+			かんぴょうの巻ずし。
+		</p>
+
+		</div><!-- /menu_list -->
+
+		<h2>巻物 300円</h2>
+		<div class="menu_list">
+
+		<p>
+			<span class="notranslate"><strong class="mincho">ネギトロ巻</strong></span><br>
+			<span class="notranslate">Negitoro maki</span><br>
+			巻きずし。刻んだマグロとネギ。
+		</p>
+
+		</div><!-- /menu_list -->
+
+		<h2>丼物 850円</h2>
+		<div class="menu_list">
+
+		<p>
+			<span class="notranslate"><strong class="mincho">海鮮丼</strong></span><br>
+			<span class="notranslate">Kaisen don</span><br>
+			魚介類をのせた丼物。
+		</p>
+		<p>
+			<span class="notranslate"><strong class="mincho">まぐろ丼</strong></span><br>
+			<span class="notranslate">Maguro don</span><br>
+			マグロをのせた丼物。
+		</p>
+
+		</div><!-- /menu_list -->
+
+		<h2>丼物 1050円</h2>
+		<div class="menu_list">
+
+		<p>
+			<span class="notranslate"><strong class="mincho">本まぐろ丼</strong></span><br>
+			<span class="notranslate">Hon maguro don</span><br>
+			本マグロをのせた丼物。
+		</p>
+
+		</div><!-- /menu_list -->
+
+  </div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>
+
