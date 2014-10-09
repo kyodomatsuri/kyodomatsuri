@@ -1,0 +1,72 @@
+経堂農大通り商店街 ビーコンとコンテンツの紐づけに関して
+
+2014/10/07 アプリックス吉岡
+
+経堂農大通り商店街のビーコン対応について、下記のルールでビーコンとコンテンツの
+紐づけを行います。
+
+
+1. ビーコンとコンテンツの紐づけ
+
+ビーコン (major, minor) 
+→ http://kyodomatsuri.com/{major}/{minor}/index.html
+⇒ http://www.nodaistreet.com/{任意のアドレス}
+
+2. http://kyodomatsuri.com/{major}/{minor}/index.html のサンプル
+以下のHTML文でお願いします。
+
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="refresh" content="1;URL=翻訳対象">
+</head>
+
+例) (major, minor)=(1,1) 農大通りのビーコン
+ファイル： http://kyodomatsuri.com/1/1/index.html
+接続先URL : http://www.nodaistreet.com/
+HTML
+=====
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="refresh" content="1;URL=http://www.nodaistreet.com/">
+</head>
+<body>
+</body>
+</html>
+=====
+
+
+3. major, minor 振り分け基本ルール
+
+3-1) major
+major = 1 : 通りに設置したビーコンに振り当てる。
+major = 2 : 個店に設置したビーコンに振り当てる。
+
+3-2) minor
+2014/10/7 現在特にルールは定めない。
+
+3-3) データ共有方法
+変更が発生した都度、情報を共有できるようにする。
+
+
+4. ビーコン基本情報
+Proximity UUID : 00000000-1B70-1001-B000-001C4D68CC64
+
+以上
+
+(2, 5) :アスナロ
+http://www.nodaistreet.com/shop/32002
+(2, 6) : 芳香園
+http://www.nodaistreet.com/shop/26001
+(2, 7) : La Le
+http://www.nodaistreet.com/shop/43003
+(2, 8) : ククマリー
+http://www.nodaistreet.com/shop/911001
+(2, 9) : サイクルパラダイス
+http://www.nodaistreet.com/shop/58001
